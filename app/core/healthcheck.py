@@ -62,7 +62,7 @@ def start(port: int = 8080) -> threading.Thread:
     def _run():
         global _server
         try:
-            _server = HTTPServer(("0.0.0.0", port), _Handler)
+            _server = HTTPServer(("127.0.0.1", port), _Handler)
             logger.info("Health-check listening on :%d/health", port)
             _server.serve_forever()
         except Exception:
