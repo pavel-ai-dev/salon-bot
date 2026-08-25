@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
-# Деплой salon-bot: локальный репозиторий (ПК) -> ${SALON_SSH_HOST:?set SALON_SSH_HOST}:/opt/salon-bot
-# Запуск из WSL:  bash infra/deploy.sh
+# Деплой salon-bot: локальный репозиторий -> целевой сервер:/opt/salon-bot
+#
+# Перед запуском задать окружение (см. deploy.env.example):
+#   export SALON_LOCAL=/path/to/salon-bot/      # локальная папка, слеш на конце обязателен
+#   export SALON_SSH_HOST=my-server            # хост или алиас из ~/.ssh/config
+#   bash infra/deploy.sh
 #
 # Безопасность: НЕ трогает на сервере .env, data/ (БД клиентов!) и logs/.
 # Код заливается rsync без --delete по защищённым путям, затем рестарт + health-check.

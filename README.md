@@ -85,9 +85,8 @@ sudo systemctl status salon_bot
 ## Backup
 
 Ежедневно в 03:00:
-- `salon.db` → `/root/backups/YYYYMMDD/`
-- `bookings.xlsx` → `/root/backups/YYYYMMDD/`
-- код v14 → `/root/backups/YYYYMMDD/v14_code.tar.gz`
+- `salon.db` и `bookings.xlsx` — в каталог бэкапов, подпапка по дате
+- код — архивом туда же
 - хранится последних 30 бэкапов
 
 ## Тесты
