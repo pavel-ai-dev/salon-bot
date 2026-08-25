@@ -9,3 +9,6 @@ data/
 logs/
 *.db
 *.session
+
+# локальное окружение деплоя
+infra/deploy.env
